@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- onkeypress, onkeyup, onkeydown -->
+<body onkeydown="if(event.keyCode == 13) {formulaResult();} else if(event.keyCode == 27) {clearInput();}">
+    <table class="calTable">
+        <tr>
+            <td colspan="4"><input type="text" id="formula"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="number" id="result" readonly></td>
+        </tr>
+        <tr>
+            <td><button onclick="clearInput()">C</button></td>
+            <td><button onclick="inputNum2(this);">&#40;</button></td>
+            <td><button onclick="inputNum2(this);">&#41;</button></td>
+            <td><button onclick="inputNum2(this);">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputNum2(this);">7</button></td>
+            <td><button onclick="inputNum2(this);">8</button></td>
+            <td><button onclick="inputNum2(this);">9</button></td>
+            <td><button onclick="inputNum2(this);">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputNum2(this);">4</button></td>
+            <td><button onclick="inputNum2(this);">5</button></td>
+            <td><button onclick="inputNum2(this);">6</button></td>
+            <td><button onclick="inputNum2(this);">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputNum2(this);">1</button></td>
+            <td><button onclick="inputNum2(this);">2</button></td>
+            <td><button onclick="inputNum2(this);">3</button></td>
+            <td><button onclick="inputNum2(this);">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="plusMinus()">+/-</button></td>
+            <td><button onclick="inputNum2(this);">0</button></td>
+            <td><button onclick="backspace()">&lt;</button></td>
+            <td><button onclick="formulaResult()">=</button></td>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</body>
+</html>
